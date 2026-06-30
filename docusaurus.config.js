@@ -16,9 +16,6 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
-// Default social sharing image // Recommended size: 1200x630px 
-  image: "img/kmesh-social-card.png",
-
   // ===== SEO: Head tags =====
   headTags: [
     {
@@ -141,6 +138,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      image: "img/kmesh-social-card.png",
       docs: {
         sidebar: {
           hideable: true,
