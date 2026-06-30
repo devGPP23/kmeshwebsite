@@ -19,49 +19,6 @@ const config = {
   // ===== SEO: Head tags =====
   headTags: [
     {
-      tagName: "link",
-      attributes: {
-        rel: "canonical",
-        href: "https://kmesh.net",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "description",
-        content:
-          "Kmesh is a high-performance, sidecarless service mesh dataplane based on eBPF and programmable kernel for cloud-native applications.",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:type",
-        content: "website",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:site_name",
-        content: "Kmesh",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "twitter:site",
-        content: "@Kmesh_net",
-      },
-    },
-    {
       tagName: "script",
       attributes: {
         type: "application/ld+json",
@@ -148,6 +105,27 @@ const config = {
 
       // ===== SEO metadata =====
       metadata: [
+        {
+          name: "description",
+          content:
+            "Kmesh is a high-performance, sidecarless service mesh dataplane based on eBPF and programmable kernel for cloud-native applications.",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:site_name",
+          content: "Kmesh",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:site",
+          content: "@Kmesh_net",
+        },
         {
           name: "keywords",
           content:
