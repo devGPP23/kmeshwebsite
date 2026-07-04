@@ -6,6 +6,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Kmesh",
+  tagline: "High-performance sidecarless service mesh dataplane based on eBPF",
   favicon: "img/favicons/favicon.ico",
 
   // Set the production url of your site here
@@ -14,6 +15,28 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+
+  // ===== SEO: Head tags =====
+  headTags: [
+    {
+      tagName: "script",
+      attributes: {
+        type: "application/ld+json",
+      },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Kmesh",
+        url: "https://kmesh.net",
+        logo: "https://kmesh.net/img/favicons/favicon.ico",
+        sameAs: [
+          "https://github.com/kmesh-net/kmesh",
+          "https://x.com/Kmesh_net",
+          "https://www.youtube.com/@Kmesh-traffic",
+        ],
+      }),
+    },
+  ],
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -72,12 +95,52 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      image: "img/kmesh-social-card.png",
       docs: {
         sidebar: {
           hideable: true,
           autoCollapseCategories: true,
         },
       },
+
+      // ===== SEO metadata =====
+      metadata: [
+        {
+          name: "description",
+          content:
+            "Kmesh is a high-performance, sidecarless service mesh dataplane based on eBPF and programmable kernel for cloud-native applications.",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:site_name",
+          content: "Kmesh",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:site",
+          content: "@Kmesh_net",
+        },
+        {
+          name: "keywords",
+          content:
+            "Kmesh, service mesh, eBPF, dataplane, Kubernetes, sidecarless, cloud-native, CNCF, high-performance networking",
+        },
+        {
+          name: "author",
+          content: "Kmesh Community",
+        },
+        {
+          name: "robots",
+          content: "index, follow",
+        },
+      ],
+
       navbar: {
         title: "Kmesh",
         logo: {
